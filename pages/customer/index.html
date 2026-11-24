@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>TEXSUS — Customer Portal | Ride Beyond Limits</title>
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/icon-192.svg">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/themes.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body>
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div id="customer-root" class="app-shell"></div>
+
+  <script type="module">
+    import { store } from '../../js/storage/store.js';
+    import { settings } from '../../js/utils/settings.js';
+    import { i18n } from '../../js/utils/i18n.js';
+    import { CustomerView } from '../../js/customer/customer-view.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      settings.init();
+      i18n.translateDOM();
+      store.setSession('customer', store.getCurrentUser());
+      const root = document.getElementById('customer-root');
+      CustomerView.render(root);
+    });
+  </script>
+</body>
+</html>

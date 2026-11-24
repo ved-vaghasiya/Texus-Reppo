@@ -1,0 +1,29 @@
+<!-- assets/bikes/premium.svg - Futuristic Royal Enfield / Cruiser -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cyanGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="160" cy="180" rx="140" ry="12" fill="#00f2fe" opacity="0.25"/>
+  <!-- Wide Rear Cruiser Wheel -->
+  <circle cx="65" cy="138" r="44" stroke="#181528" stroke-width="10" fill="#0d0c15" />
+  <circle cx="65" cy="138" r="32" stroke="#00f2fe" stroke-width="3" fill="none" />
+  <circle cx="65" cy="138" r="16" fill="#00f2fe" />
+  <!-- Front Wheel (Large 19 inch) -->
+  <circle cx="260" cy="134" r="46" stroke="#181528" stroke-width="8" fill="#0d0c15" />
+  <circle cx="260" cy="134" r="35" stroke="#4facfe" stroke-width="2.5" fill="none" />
+  <circle cx="260" cy="134" r="14" fill="#00f2fe" />
+  <!-- Low Rake Cruiser Frame -->
+  <path d="M65 138 L140 142 L165 95 L225 85 L260 134" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- Teardrop Tank -->
+  <path d="M140 85 C170 65 210 70 215 90 C200 110 160 110 140 85 Z" fill="url(#cyanGold)"/>
+  <!-- Deep Scoop Saddle -->
+  <path d="M95 105 Q125 105 140 95 L145 115 Q115 125 95 105 Z" fill="#1f1b2c" stroke="#00f2fe" stroke-width="1.5"/>
+  <!-- Extended Ape Hanger Handlebars -->
+  <path d="M225 85 L215 50 L195 45" stroke="#fff" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Twin Chrome Exhaust -->
+  <path d="M140 145 L70 152" stroke="#00f2fe" stroke-width="6" stroke-linecap="round"/>
+  <path d="M150 152 L80 160" stroke="#4facfe" stroke-width="5" stroke-linecap="round"/>
+</svg>

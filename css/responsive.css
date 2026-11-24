@@ -1,0 +1,77 @@
+/* responsive.css - Mobile-first breakpoints & adaptive layouts */
+
+/* Mobile view (< 768px) */
+@media (max-width: 767px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .sidebar {
+    display: none !important;
+  }
+  .dashboard-layout {
+    flex-direction: column;
+  }
+  .dashboard-content {
+    padding: 16px;
+    padding-bottom: 90px;
+  }
+  .app-header {
+    padding: 0 14px;
+  }
+  .modal-content {
+    padding: 20px;
+    border-radius: var(--radius-lg);
+  }
+  .role-cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mobile-only {
+    display: none !important;
+  }
+  .sidebar {
+    width: 220px;
+  }
+  .dashboard-content {
+    padding: 22px;
+  }
+  .role-cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Desktop (>= 1024px) */
+@media (min-width: 1024px) {
+  .mobile-only {
+    display: none !important;
+  }
+  .bottom-nav {
+    display: none !important;
+  }
+  .view-container {
+    padding-bottom: 30px;
+  }
+  .role-cards-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  /* On desktop customer view, show floating centered phone preview or expansive desktop UI */
+  .customer-mobile-frame {
+    max-width: 480px;
+    margin: 20px auto;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg), var(--shadow-neon-sm);
+    border: 1px solid var(--border-glow);
+    background: var(--bg-surface);
+    overflow: hidden;
+    position: relative;
+    min-height: 820px;
+  }
+  .customer-mobile-frame .bottom-nav {
+    display: flex !important;
+    position: absolute;
+    width: 100%;
+  }
+}

@@ -1,0 +1,27 @@
+<!-- assets/bikes/electric.svg - Futuristic Neon Green Electric Superbike -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="greenPulse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e676" />
+      <stop offset="100%" stop-color="#00b0ff" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="160" cy="180" rx="130" ry="12" fill="#00e676" opacity="0.3"/>
+  <!-- Aerodynamic Hubless Rear Wheel -->
+  <circle cx="70" cy="140" r="40" stroke="#1f1d2e" stroke-width="8" fill="none" />
+  <circle cx="70" cy="140" r="32" stroke="#00e676" stroke-width="4" stroke-dasharray="12 6" fill="none" />
+  <!-- Hubless Front Wheel -->
+  <circle cx="250" cy="140" r="40" stroke="#1f1d2e" stroke-width="8" fill="none" />
+  <circle cx="250" cy="140" r="32" stroke="#00e676" stroke-width="4" stroke-dasharray="12 6" fill="none" />
+  <!-- Monocoque Battery Enclosure -->
+  <polygon points="120,145 185,145 205,100 135,100" fill="#181528" stroke="#00e676" stroke-width="2"/>
+  <path d="M140 122 L155 110 L155 125 L170 120 L150 135 L150 125 Z" fill="#00e676"/>
+  <!-- Futuristic Sharp Fairing -->
+  <path d="M120 95 L170 75 L230 75 L245 110 L200 115 Z" fill="url(#greenPulse)"/>
+  <!-- Minimalist Cyber Saddle -->
+  <path d="M85 95 L130 95 L125 105 L80 102 Z" fill="#0d0c15" stroke="#00e676" stroke-width="1.5"/>
+  <!-- Clip-on Aero Bars -->
+  <path d="M225 75 L215 55 L200 55" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- LED Headlight Strip -->
+  <path d="M235 85 L255 90" stroke="#00e676" stroke-width="4" stroke-linecap="round"/>
+</svg>

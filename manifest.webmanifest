@@ -1,0 +1,46 @@
+{
+  "name": "TEXSUS — Ride Beyond Limits",
+  "short_name": "TEXSUS",
+  "description": "Premium 3D Bike Taxi Progressive Web Application for India",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0910",
+  "theme_color": "#9d00ff",
+  "icons": [
+    {
+      "src": "./assets/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Bike Taxi",
+      "url": "./index.html#customer",
+      "icons": [{ "src": "./assets/icons/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Captain Cockpit",
+      "url": "./index.html#driver",
+      "icons": [{ "src": "./assets/icons/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Operations Admin",
+      "url": "./index.html#admin",
+      "icons": [{ "src": "./assets/icons/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Executive Owner Suite",
+      "url": "./index.html#owner",
+      "icons": [{ "src": "./assets/icons/icon-192.svg", "sizes": "192x192" }]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>TEXSUS — Captain Cockpit | Ride Beyond Limits</title>
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/icon-192.svg">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/themes.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body>
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div id="driver-root" class="app-shell"></div>
+
+  <script type="module">
+    import { store } from '../../js/storage/store.js';
+    import { settings } from '../../js/utils/settings.js';
+    import { i18n } from '../../js/utils/i18n.js';
+    import { DriverView } from '../../js/driver/driver-view.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      settings.init();
+      i18n.translateDOM();
+      store.setSession('driver', store.get('drivers')[0]);
+      const root = document.getElementById('driver-root');
+      DriverView.render(root);
+    });
+  </script>
+</body>
+</html>

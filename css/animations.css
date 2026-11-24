@@ -1,0 +1,111 @@
+/* animations.css - GSAP companion, keyframes, 3D pulses and transitions */
+
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(157, 0, 255, 0.4), 0 0 30px rgba(157, 0, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(184, 51, 255, 0.7), 0 0 50px rgba(157, 0, 255, 0.35);
+  }
+}
+
+@keyframes radarPing {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes routeDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotateZ(1deg);
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-pulse-neon {
+  animation: neonPulse 2.5s infinite ease-in-out;
+}
+
+.animate-float {
+  animation: floatY 4s infinite ease-in-out;
+}
+
+.radar-ping {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--color-primary);
+  animation: radarPing 2s infinite cubic-bezier(0, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.radar-ping-danger {
+  background: var(--color-danger);
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-surface-elevated) 25%, var(--bg-card-hover) 50%, var(--bg-surface-elevated) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s infinite;
+  border-radius: var(--radius-sm);
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid rgba(157, 0, 255, 0.2);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+/* Page Transition Fades */
+.page-fade-enter {
+  opacity: 0;
+  transform: translateY(12px) scale(0.99);
+}
+
+.page-fade-enter-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reduced Motion and in-app disable */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+[data-animations="false"] * {
+  animation: none !important;
+  transition: none !important;
+}

@@ -1,0 +1,52 @@
+/* variables.css - Brand tokens, 3D depths, and neon purple palette */
+:root {
+  /* Brand Neon Colors */
+  --color-primary: #9d00ff;
+  --color-primary-glow: #b833ff;
+  --color-primary-light: #d680ff;
+  --color-primary-dark: #6200a0;
+  --color-primary-rgb: 157, 0, 255;
+  
+  --color-accent: #00f2fe;
+  --color-accent-glow: #4facfe;
+  
+  --color-success: #00e676;
+  --color-success-rgb: 0, 230, 118;
+  --color-warning: #ffb300;
+  --color-warning-rgb: 255, 179, 0;
+  --color-danger: #ff1744;
+  --color-danger-rgb: 255, 23, 68;
+  --color-info: #00b0ff;
+
+  /* Typography */
+  --font-main: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  --font-display: 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  /* 3D Depth & Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
+  --shadow-neon: 0 0 20px rgba(157, 0, 255, 0.45), 0 0 40px rgba(157, 0, 255, 0.2);
+  --shadow-neon-sm: 0 0 10px rgba(157, 0, 255, 0.35);
+  --shadow-neon-hover: 0 0 25px rgba(184, 51, 255, 0.65), 0 0 60px rgba(157, 0, 255, 0.3);
+
+  /* Border Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout dimensions */
+  --header-height: 68px;
+  --bottom-nav-height: 72px;
+  --sidebar-width: 270px;
+}

@@ -1,0 +1,33 @@
+<!-- assets/icons/icon-192.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="iconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a172c" />
+      <stop offset="100%" stop-color="#0a0910" />
+    </linearGradient>
+    <linearGradient id="purpleNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b833ff" />
+      <stop offset="100%" stop-color="#6200a0" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="192" height="192" rx="42" fill="url(#iconBg)" stroke="#9d00ff" stroke-width="4"/>
+  <!-- Bike Symbol -->
+  <g transform="translate(16, 24) scale(0.5)" filter="url(#glow)">
+    <circle cx="70" cy="140" r="42" stroke="#fff" stroke-width="8" fill="none"/>
+    <circle cx="250" cy="140" r="42" stroke="#00f2fe" stroke-width="8" fill="none"/>
+    <path d="M70 140 L130 140 L160 90 L230 90 L250 140" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M150 85 Q190 70 215 88 L185 110 Z" fill="url(#purpleNeon)"/>
+    <path d="M250 140 L220 65 L205 60" stroke="#00f2fe" stroke-width="8" stroke-linecap="round" fill="none"/>
+  </g>
+  <!-- Text Wordmark -->
+  <text x="96" y="152" fill="#fff" font-family="system-ui, sans-serif" font-size="22" font-weight="900" letter-spacing="3" text-anchor="middle">
+    TEXSUS
+  </text>
+</svg>
